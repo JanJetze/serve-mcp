@@ -20,23 +20,17 @@ Stops the currently running file server.
 ## Setup
 
 ```sh
+git clone https://github.com/janjetze/serve-mcp.git
+cd serve-mcp
 ./setup.sh
 ```
 
 This creates a `.venv` with Python 3.13 and installs dependencies (`mcp`, `qrcode`).
 
-## Claude Code configuration
+## Add to Claude Code
 
-Add to your Claude Code MCP settings:
-
-```json
-{
-  "mcpServers": {
-    "serve-mcp": {
-      "command": "/path/to/serve-mcp/.venv/bin/python",
-      "args": ["-m", "serve_mcp.server"],
-      "cwd": "/path/to/serve-mcp"
-    }
-  }
-}
+```sh
+claude mcp add serve-mcp -s user -- /path/to/serve-mcp/.venv/bin/python /path/to/serve-mcp/serve_mcp/server.py
 ```
+
+Replace `/path/to/serve-mcp` with the actual path where you cloned the repo.
