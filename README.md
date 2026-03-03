@@ -1,6 +1,8 @@
 # serve-mcp
 
-An MCP server that serves files over your local network. Open the QR page on your computer, scan with your phone, and the file downloads instantly. The server shuts down automatically after the transfer.
+An [MCP](https://modelcontextprotocol.io/) server for transferring files to your phone. Ask Claude to send a file, open the QR page on your computer, scan it with your phone, and the file downloads instantly. The server shuts down automatically after the transfer.
+
+No cloud uploads, no apps to install -- just a local HTTP server with a QR code.
 
 ## Tools
 
@@ -34,3 +36,7 @@ claude mcp add serve-mcp -s user -- /path/to/serve-mcp/.venv/bin/python /path/to
 ```
 
 Replace `/path/to/serve-mcp` with the actual path where you cloned the repo.
+
+## License
+
+[MIT](LICENSE)
