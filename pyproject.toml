@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "serve-mcp"
+version = "0.1.0"
+description = "MCP server for transferring files to your phone via QR code"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Jan Jetze" }]
+keywords = ["mcp", "file-transfer", "qr-code"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "mcp",
+    "qrcode",
+]
+
+[project.scripts]
+serve-mcp = "serve_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/janjetze/serve-mcp"
+Repository = "https://github.com/janjetze/serve-mcp"

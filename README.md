@@ -19,23 +19,20 @@ Starts an HTTP server for a single file. Returns a download URL (for the LAN) an
 
 Stops the currently running file server.
 
-## Setup
+## Add to Claude Code
+
+```sh
+claude mcp add serve-mcp -s user -- uvx serve-mcp
+```
+
+Or install from source:
 
 ```sh
 git clone https://github.com/janjetze/serve-mcp.git
 cd serve-mcp
-./setup.sh
+pip install .
+claude mcp add serve-mcp -s user -- serve-mcp
 ```
-
-This creates a `.venv` with Python 3.13 and installs dependencies (`mcp`, `qrcode`).
-
-## Add to Claude Code
-
-```sh
-claude mcp add serve-mcp -s user -- /path/to/serve-mcp/.venv/bin/python /path/to/serve-mcp/serve_mcp/server.py
-```
-
-Replace `/path/to/serve-mcp` with the actual path where you cloned the repo.
 
 ## License
 

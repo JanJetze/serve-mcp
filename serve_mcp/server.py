@@ -293,5 +293,9 @@ def stop_server() -> str:
     return f"Stopped server for {file_path} on port {port}."
 
 
-if __name__ == "__main__":
+def main():
     mcp.run(transport="stdio")
+
+
+if __name__ == "__main__":
+    main()
